@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {  //代理地址  
+        target: 'http://127.0.0.1:7002',  //需要代理的地址  
+        changeOrigin: true,  //是否跨域
+        pathRewrite:{
+          '^/api':''
+       }
+      }
+    },
 
     // Various Dev Server settings
 

@@ -61,6 +61,17 @@ export const constantRouterMap = [
       name: 'guide',
       meta: { title: 'guide', icon: 'guide', noCache: true }
     }]
+  },
+  {
+    path: '/achievement',
+    component: Layout,
+    redirect: '/achievement/standardLib',
+    children: [{
+      path: 'achievementLib',
+      component: () => import('@/views/achievement/standardLib'),
+      name: 'achievement',
+      meta: { title: '业绩标准库', icon: 'guide', noCache: true }
+    }]
   }
 ]
 
